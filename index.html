@@ -44,11 +44,13 @@
       <div class="firstname">
         <label for="firstname">First Name*</label>
         <input type="text" id="firstname">
+        <p>This field is required</p>
       </div>
 
       <div class="lastname">
         <label for="lastname">Last Name*</label>
         <input type="text" id="lastname">
+        <p class="errorone">This field is required</p>
       </div>
     </section>
 
@@ -56,6 +58,7 @@
     <section class="email">
       <label for="email">Email Address*</label>
       <input type="email" id="email">
+      <p class="errortwo">This field is required</p>
     </section>
 
     <!--Query type section-->
@@ -94,5 +97,7 @@
     </section>
   </div>
   </form>
+
+  <script src="validate.js"></script>
 </body>
 </html>

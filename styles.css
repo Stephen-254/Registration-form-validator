@@ -58,6 +58,12 @@ header{
     font-size: 20px;
 }
 
+.firstname p{
+    color: hsl(0, 66%, 54%);
+    font-weight: 700;
+    display: none;
+}
+
 .firstname label,
 .lastname label{
     margin-bottom: 10px;
@@ -69,6 +75,13 @@ header{
     border-radius: 5px;
     font-size: 20px;
 }
+
+.lastname p{
+    color: hsl(0, 66%, 54%);
+    font-weight: 700;
+    display: none;
+}
+
 .email{
     display: flex;
     flex-direction: column;
