@@ -3,15 +3,15 @@
 html,
 body{
     width: 100%;
-
 }
 
 body{
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-top: 15em;
+    margin-top: 10em;
     flex-wrap: wrap;
+    background-color: hsl(148, 38%, 91%);
 }
 *{
     box-sizing: border-box;
@@ -22,10 +22,17 @@ body{
     font-style: normal;
 }
 
+header{
+    color: hsl(187, 24%, 22%);
+    font-weight: 900;
+    font-size: 25px;
+}
+
 #container{
    width: auto;
-   border: 3px solid red;
-   height: 700px;
+   height: 750px;
+   background-color: white;
+   border-radius: 15px;
 }
 
 .info{
@@ -35,6 +42,7 @@ body{
 
 .Names{
     display: flex;
+    margin-bottom: 25px;
 }
 .firstname,
 .lastname{
@@ -49,18 +57,17 @@ body{
     border-radius: 5px;
 }
 
-.firstname label{
-    margin-left: 30px;
-}
-
 .lastname input {
     width: 374px;
     height: 50px;
     border-radius: 5px;
 }
-
+.email{
+    display: flex;
+    flex-direction: column;
+}
 .email input{
-    width: 86%;
+    width: 100%;
     height: 50px;
     margin-top: 20px;
     border-radius: 5px;
@@ -68,7 +75,7 @@ body{
 
 .queries{
     display: flex;
-    text-align: center;
+    margin-bottom: 20px;
 }
 
 .query-one{
@@ -81,6 +88,7 @@ body{
 
 .query-one input{
     margin-top: 15px;
+    margin-left: 10px;
 }
 
 .query-two{
@@ -91,15 +99,21 @@ body{
 
 .query-two input{
     margin-top: 15px;
+    margin-left: 10px;
 }
 
 .message textarea{
     width: 100%;
     height: 150px;
-    margin-top: 15px;
     resize: none;
     border-radius: 5px;
 }
+
+.terms{
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
 
 .submit{
     display: flex;
@@ -107,14 +121,13 @@ body{
     justify-content: center;
 }
 
-.terms input{
-   
-}
 
 .submit input{
     width: 100%;
     height: 50px;
-    font-size: 30px;
+    font-size: 20px;
     border-radius: 5px;
+    color: white;
+    background-color: hsl(169, 82%, 27%);
 }
 
