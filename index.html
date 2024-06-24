@@ -1,13 +1,3 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
-  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
-  <title>Frontend Mentor | Contact form</title>
-  <link rel="stylesheet" href="styles.css">
-</head>
-<body>
 
   
   <!--This field is required
@@ -32,69 +22,83 @@
   Message Sent!
   Thanks for completing the form. We'll be in touch soon!-->
   
-  <form id="container">
+  <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  <title>Frontend Mentor | Contact form</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <form id="container" onsubmit="return validateForm()">
     <div class="info">
-    <!--Header section-->
-    <header>
-      <h1>Contact Us</h1>
-    </header>
+      <!--Header section-->
+      <header>
+        <h1>Contact Us</h1>
+      </header>
 
-    <!--Names Section-->
-    <section class="Names">
-      <div class="firstname">
-        <label for="firstname">First Name*</label>
-        <input type="text" id="firstname">
-      </div>
-      <p style="color: red; display: none;" id="firsterror">This input field is required</p>
-
-      <div class="lastname">
-        <label for="lastname">Last Name*</label>
-        <input type="text" id="lastname">
-      </div>
-      <p style="color: red; display: none;" id="lasterror">This input field is required</p>
-    </section>
-
-    <!--E-mails Section-->
-    <section class="email">
-      <label for="email">Email Address*</label>
-      <input type="email" id="email">
-    </section>
-
-    <!--Query type section-->
-    <section class="query">
-      <p>Query Type*</p>
-      <div class="queries">
-
-        <div class="query-one">
-          <input type="radio" name="one" id="query-one"> 
-          <label for="query-one">General Enquiry</label>
+      <!--Names Section-->
+      <section class="Names">
+        <div class="firstname">
+          <label for="firstname">First Name*</label>
+          <input type="text" id="firstname" name="firstname">
         </div>
+        <p style="color: red; display: none;" id="firsterror">This input field is required</p>
 
-      <div class="query-two">
-        <input type="radio" name="one"> Support Request
-      </div>
-      </div>
-    </section>
+        <div class="lastname">
+          <label for="lastname">Last Name*</label>
+          <input type="text" id="lastname" name="lastname">
+        </div>
+        <p style="color: red; display: none;" id="lasterror">This input field is required</p>
+      </section>
 
-    <!--Message section-->
-    <section class="message">
-      <p>Message*</p>
-      <textarea name="message" id="messsage"></textarea>
-    </section>
+      <!--E-mails Section-->
+      <section class="email">
+        <label for="email">Email Address*</label>
+        <input type="email" id="email" name="email">
+        <p style="color: red; display: none;" id="emailerror">Please enter a valid email address</p>
+      </section>
 
-    <!--Terms and conditions-->
-    <section class="terms">
-      <input type="checkbox" id="terms"> 
-      <label for="terms">
-        I consent to being contacted by the team*
-      </label>
-    </section>
+      <!--Query type section-->
+      <section class="query">
+        <p>Query Type*</p>
+        <div class="queries">
+          <div class="query-one">
+            <input type="radio" name="query" id="query-one" value="General Enquiry">
+            <label for="query-one">General Enquiry</label>
+          </div>
 
-    <!--Submit Button-->
-    <section class="submit">
-      <input type="submit" onsubmit="firtstNameError()"">
-    </section>
-  </div>
+          <div class="query-two">
+            <input type="radio" name="query" value="Support Request"> Support Request
+          </div>
+        </div>
+        <p style="color: red; display: none;" id="queryerror">Please select a query type</p>
+      </section>
+
+      <!--Message section-->
+      <section class="message">
+        <p>Message*</p>
+        <textarea name="message" id="message"></textarea>
+        <p style="color: red; display: none;" id="messageerror">This field is required</p>
+      </section>
+
+      <!--Terms and conditions-->
+      <section class="terms">
+        <input type="checkbox" id="terms">
+        <label for="terms">
+          I consent to being contacted by the team*
+        </label>
+        <p style="color: red; display: none;" id="termserror">To submit this form, please consent to being contacted</p>
+      </section>
+
+      <!--Submit Button-->
+      <section class="submit">
+        <input type="submit" value="Submit">
+      </section>
+    </div>
   </form>
 
   <script src="validate.js"></script>
