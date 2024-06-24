@@ -44,21 +44,20 @@
       <div class="firstname">
         <label for="firstname">First Name*</label>
         <input type="text" id="firstname">
-        <p class="firsterror">This field is required</p>
       </div>
+      <p style="color: red; display: none;" id="firsterror">This input field is required</p>
 
       <div class="lastname">
         <label for="lastname">Last Name*</label>
         <input type="text" id="lastname">
-        <p class="lasterror">This field is required</p>
       </div>
+      <p style="color: red; display: none;" id="lasterror">This input field is required</p>
     </section>
 
     <!--E-mails Section-->
     <section class="email">
       <label for="email">Email Address*</label>
       <input type="email" id="email">
-      <p class="emailerror"> Please enter a valid email address</p>
     </section>
 
     <!--Query type section-->
@@ -93,7 +92,7 @@
 
     <!--Submit Button-->
     <section class="submit">
-      <input type="submit" onclick="firtstNameError()">
+      <input type="submit" onsubmit="firtstNameError()"">
     </section>
   </div>
   </form>

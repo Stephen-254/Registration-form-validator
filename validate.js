@@ -1,19 +1,14 @@
-const form = document.getElementById("container");
-const firstName = document.getElementById("firstname");
-const lastName = document.getElementById("lastname");
-const firstError = document.querySelector(".firsterror");
-const secondError = document.querySelector(".lasterror");
+const firstName = document.getElementsById("#firstname");
+const ErrorOne = document.getElementById("#firsterror");
+ 
 
-function firstNameError () {
+function firstNameError() {
     if(firstName.value === "") {
-        firstError.style.display = "inline";
+        ErrorOne.style.display = "inline";
     } else{
-        firstError.style.display = "none";
+        ErrorOne.style.display = "none";
     }
 }
-
-
- 
 
 
 
