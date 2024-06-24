@@ -50,6 +50,12 @@ header{
     flex-direction: column;
 }
 
+.firsterror,
+.lasterror{
+    width: 100%;
+    color: red;
+}
+
 .firstname input{
     width: 400px;
     height: 50px;

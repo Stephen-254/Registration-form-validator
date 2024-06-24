@@ -1,24 +1,20 @@
+const form = document.getElementById("container");
 const firstName = document.getElementById("firstname");
 const lastName = document.getElementById("lastname");
-const firstError = document.querySelector(".errorone");
-const secondError = document.querySelector(".errortwo");
-const form = document.getElementById("container");
+const firstError = document.querySelector(".firsterror");
+const secondError = document.querySelector(".lasterror");
 
-/*Empty field*/
-form.addEventListener("submit", function(event) {
-    let isValid = true;
-
-    if (firstName.value.trim() === "") {
+function firstNameError () {
+    if(firstName.value === "") {
         firstError.style.display = "inline";
-        isValid = false;
-    } else {
+    } else{
         firstError.style.display = "none";
     }
+}
 
-    if (!isValid) {
-        event.preventDefault();
-    }
-});
+
+ 
+
 
 
 
