@@ -61,7 +61,7 @@ function validateForm() {
 
     if( isValid) {
         alert("Message Sent!");
-        alert.display.backgroundColor = "red";
+        
     } 
 
     return isValid;
