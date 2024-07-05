@@ -14,6 +14,8 @@ function validateForm() {
     const ErrorTerms = document.getElementById("termserror");
     const ErrorQuery = document.getElementById("queryerror");
 
+    const alertBox = document.querySelector(".alert");
+
     let isValid = true;
 
     
@@ -59,12 +61,13 @@ function validateForm() {
         ErrorTerms.style.display = "none";
     }
 
-    if( isValid) {
-        alert("Message Sent!");
-        
-    } 
+    if (isValid) {
+        console.log("Form is valid");
+        alertBox.style.display = "block";
+    } else {
+        console.log("Form is not valid");
+    }
 
-    return isValid;
 }
 
 

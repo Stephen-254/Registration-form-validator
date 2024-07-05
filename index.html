@@ -45,21 +45,21 @@
         <div class="firstname">
           <label for="firstname">First Name*</label>
           <input type="text" id="firstname" name="firstname">
+          <p style="color: red;" id="firsterror">This input field is required</p>
         </div>
-        <p style="color: red; display: none;" id="firsterror">This input field is required</p>
 
         <div class="lastname">
           <label for="lastname">Last Name*</label>
           <input type="text" id="lastname" name="lastname">
+          <p style="color: red;" id="lasterror">This input field is required</p>
         </div>
-        <p style="color: red; display: none;" id="lasterror">This input field is required</p>
       </section>
 
       <!--E-mails Section-->
       <section class="email">
         <label for="email">Email Address*</label>
         <input type="email" id="email" name="email">
-        <p style="color: red; display: none;" id="emailerror">Please enter a valid email address</p>
+        <p style="color: red; display: none; font-weight: 700;" id="emailerror">Please enter a valid email address</p>
       </section>
 
       <!--Query type section-->
@@ -75,23 +75,20 @@
             <input type="radio" name="query" value="Support Request"> Support Request
           </div>
         </div>
-        <p style="color: red; display: none;" id="queryerror">Please select a query type</p>
+        <p style="color: red; display: none; font-weight: 700;" id="queryerror">Please select a query type</p>
       </section>
 
       <!--Message section-->
       <section class="message">
         <p>Message*</p>
         <textarea name="message" id="message"></textarea>
-        <p style="color: red; display: none;" id="messageerror">This field is required</p>
+        <p style="color: red; display: none; font-weight: 700;" id="messageerror">This field is required</p>
       </section>
 
       <!--Terms and conditions-->
       <section class="terms">
-        <input type="checkbox" id="terms">
-        <label for="terms">
-          I consent to being contacted by the team*
-        </label>
-        <p style="color: red; display: none;" id="termserror">To submit this form, please consent to being contacted</p>
+        <label for="terms"><input type="checkbox" id="terms">I consent to being contacted by the team*</label>
+        <p style="color: red; display: none; font-weight: 700;" id="termserror">To submit this form, please consent to being contacted</p>
       </section>
 
       <!--Submit Button-->
@@ -102,7 +99,10 @@
   </form>
 
   <!--Alert Box-->
-  
+  <section class="alert" style="display: none;">
+    <h1>Message Sent!</h1>
+    <p>Thanks for completing the form. We'll be in touch soon!</p>
+  </section>
   <script src="validate.js"></script>
 </body>
 </html>
