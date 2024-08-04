@@ -1,5 +1,6 @@
 
-function validateForm() {
+function validateForm(event) {
+    
     const firstName = document.getElementById("firstname");
     const lastName = document.getElementById("lastname");
     const email = document.getElementById("email");
@@ -7,66 +8,68 @@ function validateForm() {
     const terms = document.getElementById("terms");
     const query = document.querySelector('input[name="query"]:checked');
     
-    const ErrorOne = document.getElementById("firsterror");
-    const ErrorLast = document.getElementById("lasterror");
-    const ErrorEmail = document.getElementById("emailerror");
-    const ErrorMessage = document.getElementById("messageerror");
-    const ErrorTerms = document.getElementById("termserror");
-    const ErrorQuery = document.getElementById("queryerror");
+    const errorOne = document.getElementById("firsterror");
+    const errorLast = document.getElementById("lasterror");
+    const errorEmail = document.getElementById("emailerror");
+    const errorMessage = document.getElementById("messageerror");
+    const errorTerms = document.getElementById("termserror");
+    const errorQuery = document.getElementById("queryerror");
+    const submissionAlert = document.getElementById("alert");
 
-    const alertBox = document.querySelector(".alert");
-
-    let isValid = true;
+    let checkIfFormIsValid = true;
 
     
     if (firstName.value === "") {
-        ErrorOne.style.display = "inline";
-        isValid = false;
+        errorOne.style.display = "inline";
+        checkIfFormIsValid = false;
     } else {
-        ErrorOne.style.display = "none";
+        errorOne.style.display = "none";
     }
 
     if (lastName.value === "") {
-        ErrorLast.style.display = "inline";
-        isValid = false;
+        errorLast.style.display = "inline";
+        checkIfFormIsValid = false;
     } else {
-        ErrorLast.style.display = "none";
+        errorLast.style.display = "none";
     }
 
     if (email.value === "" || !email.validity.valid) {
-        ErrorEmail.style.display = "inline";
-        isValid = false;
+        errorEmail.style.display = "inline";
+        checkIfFormIsValid = false;
     } else {
-        ErrorEmail.style.display = "none";
+        errorEmail.style.display = "none";
     }
 
     if (!query) {
-        ErrorQuery.style.display = "inline";
-        isValid = false;
+        errorQuery.style.display = "inline";
+        checkIfFormIsValid = false;
     } else {
-        ErrorQuery.style.display = "none";
+        errorQuery.style.display = "none";
     }
 
     if (message.value === "") {
-        ErrorMessage.style.display = "inline";
-        isValid = false;
+        errorMessage.style.display = "inline";
+        checkIfFormIsValid = false;
     } else {
-        ErrorMessage.style.display = "none";
+        errorMessage.style.display = "none";
     }
 
     if (!terms.checked) {
-        ErrorTerms.style.display = "inline";
-        isValid = false;
+        errorTerms.style.display = "inline";
+        checkIfFormIsValid = false;
     } else {
-        ErrorTerms.style.display = "none";
+        errorTerms.style.display = "none";
     }
 
-    if (isValid) {
-        console.log("Form is valid");
-        alertBox.style.display = "block";
-    } else {
-        console.log("Form is not valid");
+    function submitForm(checkIfFormIsValid){
+        if (checkIfFormIsValid){
+            submissionAlert.style.display = "block";
+        } else{
+            submissionAlert.style.display = "none";
+        }
     }
+    
+    return checkIfFormIsValid;
 
 }
 

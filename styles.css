@@ -185,7 +185,8 @@ header{
     background-color: hsl(187, 24%, 22%);
 }
 
-.alert{
+#alert{
+    display: none;
     width: 450px;
     height: 80px;
     background-color: hsl(169, 82%, 27%);
@@ -194,8 +195,8 @@ header{
     top: 20px;
 }
 
-.alert h1,
-.alert p{
+#alert h1,
+#alert p{
     margin-left: 10px;
 }
 
