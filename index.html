@@ -33,7 +33,7 @@
 </head>
 <body>
 
-  <form id="container" onsubmit="return validateForm()">
+  <form id="container" onsubmit="return false">
     <div class="info">
       <!--Header section-->
       <header>
@@ -93,7 +93,7 @@
 
       <!--Submit Button-->
       <section class="submit">
-        <input type="submit" value="Submit" onclick="submitForm()">
+        <button onclick="validateForm()">Submit</button>
       </section>
     </div>
   </form>

@@ -1,6 +1,7 @@
 
 function validateForm(event) {
     
+    const form = document.getElementById("container");
     const firstName = document.getElementById("firstname");
     const lastName = document.getElementById("lastname");
     const email = document.getElementById("email");
@@ -15,6 +16,7 @@ function validateForm(event) {
     const errorTerms = document.getElementById("termserror");
     const errorQuery = document.getElementById("queryerror");
     const submissionAlert = document.getElementById("alert");
+
 
     let checkIfFormIsValid = true;
 
@@ -68,10 +70,16 @@ function validateForm(event) {
             submissionAlert.style.display = "none";
         }
     }
+
+    if(checkIfFormIsValid) {
+        form.reset();
+    }
     
-    return checkIfFormIsValid;
+    submitForm(checkIfFormIsValid);
 
 }
+
+
 
 
 
